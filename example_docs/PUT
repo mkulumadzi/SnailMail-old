@@ -1,0 +1,7 @@
+HTTP/1.1 415 Unsupported Media Type
+Server: CouchDB/1.5.0 (Erlang OTP/R16B01)
+Date: Fri, 07 Mar 2014 01:15:54 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 78
+Cache-Control: must-revalidate
+

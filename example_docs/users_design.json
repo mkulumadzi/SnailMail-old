@@ -1,0 +1,15 @@
+{
+	"_id" : "_design/snailmail",
+	"_rev":"4-fc783378fba3a697504ac59646591dfb",
+	"views" : {
+		"foo" : {
+			"map" : "function(doc){ emit(doc._id, doc._rev)}"
+		},
+		"user_state" : {
+			"map" : "function(doc){if(doc.name && doc.state) { emit(doc.name, doc.state);}}"
+		},
+		"date_sent" : {
+			"map" : "function(doc){if(doc.sent && doc.content) {emit(doc.sent, doc.content);}}"
+		}
+	}
+}

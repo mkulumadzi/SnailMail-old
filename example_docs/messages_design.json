@@ -1,0 +1,8 @@
+{
+   "_id": "_design/messages",
+   "_rev": "36-82462150ffa1e2d4ddaeb535a294393c",
+   "views": {
+       "to_send": {
+           "map": "function(doc){var now = new Date(); if(doc.deliver_after){var deliver_after = new Date(doc.deliver_after);} if(doc.delivered===false && doc.to && deliver_after <= now) {emit(doc._id, [doc.to, doc.deliver_after]);}}"
+       }
+   }
