@@ -8,6 +8,18 @@ get '/' do
 
 end
 
+post '/user' do
+  #stuff
+end
+
+get '/users' do
+  
+  User.all.each do |user|
+    puts "User: #{user.name}"
+  end
+
+end
+
 post '/message' do
   #stuff
 end
