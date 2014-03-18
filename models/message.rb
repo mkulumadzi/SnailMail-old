@@ -1,5 +1,11 @@
 require 'couchrest_model'
 
+class Project < CouchRest::Model::Base
+	
+	use_database 'snailmail'
+
+end
+
 class Message < CouchRest::Model::Base
 
 	use_database 'snailmail'

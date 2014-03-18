@@ -1,6 +1,7 @@
 # Gemfile
 
 require "rubygems"
+require "bundler/setup"
 require "sinatra"
 require "haml"
 require "couchrest_model"
