@@ -1,8 +1,11 @@
 require 'sinatra'
 
+set :haml, {:format => :html5}
+
 get '/' do
-  # some stuff
-  'This... is... SNAILMAIL!!!!!!!!'
+
+  haml :index
+
 end
 
 post '/message' do

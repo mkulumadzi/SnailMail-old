@@ -1,50 +1,40 @@
-2561c30e-e542-4e02-8175-5cc4fc469ef0
-
-{"message": {
-	"sent_date": "2014-03-04",
-	"deliver_after": "2014-03-06",
-	"from": "62086971-a40f-11e3-a5e2-0800200c9a66",
-	"to": "152aad70-a40f-11e3-a5e2-0800200c9a66",
-	"content": "Adrienne!!!"
-  }
-}
-
-'{"_rev":"1-c3d74fe726dcd314d86809859fc8d670","message":{"sent_date":"2014-03-04","deliver_after":"2014-03-06","from":"62086971-a40f-11e3-a5e2-0800200c9a66","to":"152aad70-a40f-11e3-a5e2-0800200c9a66","content":"Adrienne!!! How are you doing?"}}'
-
-{"_id":"2561c30e-e542-4e02-8175-5cc4fc469ef0","_rev":"2-2a2860f23ad805abdd77415ab0c44f8b","message":{"sent_date":"2014-03-04","deliver_after":"2014-03-06","from":"62086971-a40f-11e3-a5e2-0800200c9a66","to":"152aad70-a40f-11e3-a5e2-0800200c9a66","content":"Adrienne!!! How are you doing?"}}
-
-
-{"message": {
-	"sent_date": "2014-03-06",
-	"deliver_after": "2014-03-08",
-	"to": "152aad70-a40f-11e3-a5e2-0800200c9a66",
-	"from": "62086971-a40f-11e3-a5e2-0800200c9a66",
-	"content": "I am good. How about you?"
-  }
-}
-
-
 {
-	"sent" : [2014, 2, 28, 5, 30, 2],
-	"deliver_after" : [2014, 3, 2, 5, 30, 2],
-	"content" : "Hi how are you?"
+   "_id": "06a095ed-a8b4-46f1-9e98-3c6d21674d7a",
+   "sent": "March 1, 2014 06:32:43",
+   "deliver_after": "March 3, 2014 06:32:43",
+   "content": "Fine thanks and you?",
+   "from": "7495045c-b0d4-4277-a9b9-056a7cb8aa2f",
+   "status": "delivered",
+   "to": "307474c3-5c12-4554-b1f9-1a5b3ce83541"
 }
 
 {
-	"sent" : [2014, 3, 1, 6, 0, 0],
-	"deliver_after" : [2014, 3, 4, 6, 0, 0],
-	"content" : "Fine thanks and you?"
+   "_id": "5dd41aca-423a-40bc-a5eb-4fe120bdcfc1",
+   "sent": "March 7, 2014 06:32:43",
+   "deliver_after": "March 9, 2014 06:32:43",
+   "content": "Nice talking to you!",
+   "from": "307474c3-5c12-4554-b1f9-1a5b3ce83541",
+   "to": "7495045c-b0d4-4277-a9b9-056a7cb8aa2f",
+   "status": "read"
 }
 
 {
-	"sent" : [2014, 3, 4, 11, 0, 0],
-	"deliver_after" : [2014, 3, 6, 11, 0, 0],
-	"content" : "Eh not bad"
+   "_id": "6a40e826-8a11-4926-a9bb-20f21446adb6",
+   "sent": "March 1, 2014 06:32:43",
+   "deliver_after": "March 4, 2014 06:32:43",
+   "content": "Hi how are you?",
+   "from": "7495045c-b0d4-4277-a9b9-056a7cb8aa2f",
+   "to": "307474c3-5c12-4554-b1f9-1a5b3ce83541",
+   "status": "undelivered"
 }
 
 {
-	"sent" : [2014, 3, 9, 8, 30, 2],
-	"deliver_after" : [2014, 3, 12, 8, 30, 2],
-	"content" : "Nice talking to you!"
+   "_id": "b1722bd5-147e-4137-84ab-8db848d31362",
+   "sent": "March 10, 2014 06:32:43",
+   "deliver_after": "March 13, 2014 06:32:43",
+   "content": "Eh not bad",
+   "from": "307474c3-5c12-4554-b1f9-1a5b3ce83541",
+   "to": "7495045c-b0d4-4277-a9b9-056a7cb8aa2f",
+   "status": "undelivered"
 }
 
