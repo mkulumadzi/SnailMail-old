@@ -10,15 +10,13 @@ class User < CouchRest::Model::Base
 	property :zip,      String
 
 	def self.all
-		[
-			{
-				:name => 'adrienne',
-				:address1 => '1411 Shady Lane Apt 1506',
-				:city => 'Bedford',
-				:state => 'TX',
-				:zip => '76021'
-			}
-		]
+		user = User.new
+		user.name = 'adrienne'
+		user.address1 = '1411 Shady Lane Apt 1506'
+		user.city = 'Bedford'
+		user.state = 'TX'
+		user.zip = '76021'
+		[user]
 	end
 
 end
