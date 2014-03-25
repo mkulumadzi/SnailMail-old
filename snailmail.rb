@@ -8,15 +8,19 @@ get '/' do
 
 end
 
-post '/user' do
-  #stuff
+get '/user' do
+
+  haml :user
+
 end
 
 get '/users' do
   
-  User.all.each do |user|
-    puts "User: #{user.name}"
-  end
+  #User.all.each do |user|
+  #  puts "User: #{user.name}"
+  #end
+
+  user_id = params["id"]
 
 end
 
