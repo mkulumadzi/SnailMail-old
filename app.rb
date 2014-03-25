@@ -1,11 +1,10 @@
 require 'sinatra'
+require_relative 'module/snailmail.rb'
 
 set :haml, {:format => :html5}
 
 get '/' do
-
   haml :index
-
 end
 
 get '/user' do
@@ -15,12 +14,6 @@ get '/user' do
 end
 
 get '/users' do
-  
-  #User.all.each do |user|
-  #  puts "User: #{user.name}"
-  #end
-
-  user_id = params["id"]
 
 end
 
@@ -31,6 +24,5 @@ end
 get '/messages' do
   user = params["username"]
   authkey = params["authkey"]
-  #stuff
   "i am a message for #{user}"
 end
