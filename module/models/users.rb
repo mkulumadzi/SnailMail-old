@@ -2,7 +2,6 @@ require 'couchrest_model'
 
 class User < CouchRest::Model::Base
 
-	use_database 'snailmail'
 	property :name,     String
 	property :address1, String
 	property :city,     String
@@ -20,3 +19,5 @@ class User < CouchRest::Model::Base
 	end
 
 end
+
+

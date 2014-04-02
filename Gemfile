@@ -14,8 +14,8 @@ gem 'sass'
 gem 'uglifier'
 gem 'httparty'
 
-group :test, :development do
-  gem 'foreman'
-  gem 'jasmine'
-  gem 'jasmine-phantom'
-end
+# group :test, :development do
+#   gem 'foreman'
+#   gem 'jasmine'
+#   gem 'jasmine-phantom'
+# end

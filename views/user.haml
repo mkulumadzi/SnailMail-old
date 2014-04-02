@@ -6,3 +6,8 @@
     %h1 New User
     %h2 This page will let you enter a new user
     %h3 It's really quite simple
+    
+%form{:action => "/user", :method => "post"}
+  %label{:for => "user[name]"} Name:
+  %input{:type => "text", :name => "user[name]", :class => "text"}
+  %input{:type => "submit", :value => "Save", :class => "button"}
