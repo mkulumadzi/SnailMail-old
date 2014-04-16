@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 gem 'sinatra'
 gem 'haml'
-gem 'couchrest_model'
+gem 'mongoid'
 gem 'unicorn'
 gem 'pry'
 gem 'rake'
@@ -14,8 +14,8 @@ gem 'sass'
 gem 'uglifier'
 gem 'httparty'
 
-# group :test, :development do
-#   gem 'foreman'
-#   gem 'jasmine'
-#   gem 'jasmine-phantom'
-# end
+group :test, :development do
+   gem 'foreman'
+   gem 'jasmine'
+   gem 'jasmine-phantom'
+end

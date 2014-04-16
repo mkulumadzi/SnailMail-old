@@ -1,0 +1,26 @@
+%html
+  %head
+    %title Add User
+
+  %body
+    %h1 New User
+    
+%form{:action => "/user/new", :method => "POST"}
+  %fieldset
+    %ol
+      %li
+        %label{:for => "name"} Name:
+        %input{:type => "text", :name => "name", :class => "text"}
+      %li
+        %label{:for => "address1"} Address:
+        %input{:type => "text", :name => "address1", :class => "text"}
+      %li
+        %label{:for => "city"} City:
+        %input{:type => "text", :name => "city", :class => "text"}
+      %li
+        %label{:for => "state"} state:
+        %input{:type => "text", :name => "state", :class => "text"}
+      %li
+        %label{:for => "zip"} Zip Code:
+        %input{:type => "text", :name => "zip", :class => "text"}
+    %input{:type => "submit", :value => "Save", :class => "button"}

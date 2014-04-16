@@ -1,14 +1,15 @@
-require 'couchrest_model'
+module SnailMail
+	class Message
+		include Mongoid::Document
+		include Mongoid::Timestamps
 
-class Message < CouchRest::Model::Base
+		field :from, type: String
+		field :to, type: String
+		field :sent, type: Date
+		field :deliver_after, type: Date
+		field :status, type: String
+		field :content, type: String
 
-	property :from,           String
-	property :to,             String
-	property :sent,           Date
-	property :deliver_after,  Date
-	property :status,         String
-	property :content,        String
-
+	end
 end
-
 

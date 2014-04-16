@@ -1,0 +1,12 @@
+%h1 Here are all of the users in Snailmail
+%h2 They are the pioneers
+
+%table
+	- users.each do |user|
+		%tr
+			%td= user.id
+			%td= user.name
+			%td= user.address1
+			%td= user.city
+			%td= user.state
+			%td= user.zip

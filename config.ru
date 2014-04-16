@@ -4,7 +4,7 @@ require "rubygems"
 require "bundler/setup"
 require "sinatra"
 require "haml"
-require "couchrest_model"
+require "mongoid"
 require "pry"
 require File.dirname(__FILE__) + '/app.rb'
 

@@ -1,0 +1,14 @@
+%html
+  %head
+    %title Send a Message
+    
+%form{:action => "/user/[id]/message/new", :method => "POST"}
+  %fieldset
+    %ol
+      %li
+        %label{:for => "to"} To:
+        %input{:type => "text", :name => "to", :class => "text"}
+      %li
+        %label{:for => "contents"} Contents:
+        %input{:type => "text", :name => "contents", :class => "text"}
+    %input{:type => "submit", :value => "Save", :class => "button"}
