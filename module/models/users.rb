@@ -2,11 +2,11 @@ require 'couchrest_model'
 
 class User < CouchRest::Model::Base
 
-	property :name,     String
-	property :address1, String
-	property :city,     String
-	property :state,    String
-	property :zip,      String
+	property :name,			String
+	property :address1,		String
+	property :city,			String
+	property :state,		String
+	property :zip,			String
 
 	def self.all
 		user = User.new

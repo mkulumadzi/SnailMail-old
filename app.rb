@@ -9,8 +9,12 @@ end
 post '/user' do
   user = User.new
   user.name = params["user"]["name"]
+  user.address1 = params["user"]["address1"]
+  user.city = params["user"]["city"]
+  user.state = params["user"]["state"]
+  user.zip = params["user"]["zip"]
   user.save 
-  "holler"
+  haml :index
 end
 
 get '/user' do

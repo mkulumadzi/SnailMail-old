@@ -4,10 +4,16 @@
 
   %body
     %h1 New User
-    %h2 This page will let you enter a new user
-    %h3 It's really quite simple
     
 %form{:action => "/user", :method => "post"}
   %label{:for => "user[name]"} Name:
   %input{:type => "text", :name => "user[name]", :class => "text"}
+  %label{:for => "user[address1]"} Address:
+  %input{:type => "text", :address1 => "user[address1]", :class => "text"}
+  %label{:for => "user[city]"} City:
+  %input{:type => "text", :city => "user[city]", :class => "text"}
+  %label{:for => "user[state]"} state:
+  %input{:type => "text", :state => "user[state]", :class => "text"}
+  %label{:for => "user[zip]"} Zip Code:
+  %input{:type => "text", :zip => "user[zip]", :class => "text"}
   %input{:type => "submit", :value => "Save", :class => "button"}
