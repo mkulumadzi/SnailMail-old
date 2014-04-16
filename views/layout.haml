@@ -1,0 +1,13 @@
+%html
+	%body
+
+	%h1 This... is... SnailMail!
+
+	%header
+		%li
+			%a(title=@title href='/') Home
+		%li
+			%a(title=@title href='/user/index') Users
+		%li
+			%a(title=@title href='/user/new') New User
+	= yield
