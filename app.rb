@@ -26,9 +26,32 @@ get '/user/index' do
   haml :'user/index', :locals => {users: @users}
 end
 
-get '/user/[id]/message/new' do
-  haml :'message/new'
+get '/user/:id' do
+  @id = params[:id]
+  @user = SnailMail::User.find(@id)
+  haml :'user/view', :locals => {user: @user}
 end
+
+get '/user/:id/message/new' do
+  @id = params[:id]
+  @user = SnailMail::User.find(@id)
+  haml :'message/new', :locals => {user: @user}
+end
+
+post '/user/:id/message/new' do
+  @id = params[:id]
+  user = SnailMail::User.find(@id)
+  message = SnailMail::Message.new
+  message.from = user.id
+  message.to = params["to"]
+  message.content = params["content"]
+  message.save!
+  haml :'/message/view', :locals => {message: message}
+end
+
+# get '/user/[id]/message/new' do
+#   haml :'message/new'
+# end
 
 # get '/messages' do
 #   user = params["username"]

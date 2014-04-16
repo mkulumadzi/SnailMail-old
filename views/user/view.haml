@@ -1,0 +1,13 @@
+%html
+	%head
+		%title User
+
+%h1= user.name
+
+%table
+	%td= user.address1
+	%td= user.city
+	%td= user.state
+	%td= user.zip
+
+%a(title=@title href='/user/#{user.id}/message/new') Write a message

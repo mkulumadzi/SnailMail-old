@@ -4,8 +4,8 @@
 %table
 	- users.each do |user|
 		%tr
-			%td= user.id
-			%td= user.name
+			%td
+				%a(title=@title href='/user/#{user.id}')= user.name
 			%td= user.address1
 			%td= user.city
 			%td= user.state
