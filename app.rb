@@ -1,5 +1,7 @@
 require_relative 'module/snailmail.rb'
 
+enable :sessions
+
 set :haml, {:format => :html5}
 
 get '/' do
@@ -7,13 +9,13 @@ get '/' do
 end
 
 post '/user/new' do
-  user = SnailMail::User.new
-  user.name = params["name"]
-  user.address1 = params["address1"]
-  user.city = params["city"]
-  user.state = params["state"]
-  user.zip = params["zip"]
-  user.save! 
+  user = SnailMail::User.create!({
+    name: params["name"],
+    address1: params["address1"],
+    city: params["city"],
+    state: params["state"],
+    zip: params["zip"]
+  })
   redirect to('/user/index')
 end
 
@@ -23,13 +25,13 @@ end
 
 get '/user/index' do
   @users = SnailMail::User.all.to_a
-  haml :'user/index', :locals => {users: @users}
+  haml :'user/index'
 end
 
 get '/user/:id' do
-  @id = params[:id]
-  @user = SnailMail::User.find(@id)
-  haml :'user/view', :locals => {user: @user}
+  @user = SnailMail::User.find(params[:id])
+  @messages = SnailMail::Message.where(from: @user.id).to_a
+  haml :'user/view'
 end
 
 get '/user/:id/message/new' do
@@ -39,22 +41,11 @@ get '/user/:id/message/new' do
 end
 
 post '/user/:id/message/new' do
-  @id = params[:id]
-  user = SnailMail::User.find(@id)
-  message = SnailMail::Message.new
-  message.from = user.id
-  message.to = params["to"]
-  message.content = params["content"]
-  message.save!
-  haml :'/message/view', :locals => {message: message}
+  @user = SnailMail::User.find(params[:id])
+  @message = SnailMail::Message.create!({
+    from: @user.id,
+    to: params["to"],
+    content: params["content"]
+  })
+  haml :'/message/view'
 end
-
-# get '/user/[id]/message/new' do
-#   haml :'message/new'
-# end
-
-# get '/messages' do
-#   user = params["username"]
-#   authkey = params["authkey"]
-#   "i am a message for #{user}"
-# end

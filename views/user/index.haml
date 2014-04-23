@@ -2,7 +2,13 @@
 %h3 They are the pioneers
 
 %table
-	- users.each do |user|
+	%tr
+		%th Name
+		%th Address
+		%th City
+		%th State
+		%th zip
+	- @users.each do |user|
 		%tr
 			%td
 				%a(title=@title href='/user/#{user.id}')= user.name

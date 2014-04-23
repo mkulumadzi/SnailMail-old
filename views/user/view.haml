@@ -2,12 +2,22 @@
 	%head
 		%title User
 
-%h3= user.name
+%h3= @user.name
 
 %table
-	%td= user.address1
-	%td= user.city
-	%td= user.state
-	%td= user.zip
+	%td= @user.address1
+	%td= @user.city
+	%td= @user.state
+	%td= @user.zip
 
-%a(title=@title href='/user/#{user.id}/message/new') Write a message
+%a(title=@title href='/user/#{@user.id}/message/new') Write a message
+
+%h3 Messages sent by #{@user.name}
+%table
+	%tr
+		%th To
+		%th Content
+	- @messages.each do |message|
+		%tr
+			%td= message.to
+			%td= message.content
