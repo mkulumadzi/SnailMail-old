@@ -24,3 +24,31 @@ Notes related resources of the **Notes API**
             }
 
 + Response 200 (application/json)
+
+    + Body
+    
+            {
+                "username": "robert",
+                "password": "password",
+                "name": "Robert Shaw",
+                "address1": "123 4th Street",
+                "city": "Springfield",
+                "state": "ME",
+                "zip": "12345"
+            }
+
+## New Postcard [/postcard/new]
+### Create a new postcard [POST]
+
++ Request (application/json)
+
+    + Body
+    
+            {
+                "postcard": {
+                    "href": "http://www.snailmail.com/12345"
+                },
+                "content": "A blob of content"
+            }
+            
++ Response 201
