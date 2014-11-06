@@ -1,0 +1,26 @@
+FORMAT: 1A
+
+# SnailMail
+Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+
+# Group Users
+Notes related resources of the **Notes API**
+
+## New User [/user/new]
+### Create a new user [POST]
+
++ Request (application/json)
+
+    + Body
+    
+            {
+                "username": "robert",
+                "password": "password",
+                "name": "Robert Shaw",
+                "address1": "123 4th Street",
+                "city": "Springfield",
+                "state": "ME",
+                "zip": "12345"
+            }
+
++ Response 200 (application/json)
