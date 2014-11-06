@@ -2,12 +2,14 @@
   %head
     %title Send a Message
     
-%form{:action => "/user/#{user.id}/message/new", :method => "POST"}
+%form{:id => "new_message", :action => "/user/#{@user.id}/message/new", :method => "POST"}
   %fieldset
     %ol
       %li
         %label{:for => "to"} To:
-        %input{:type => "search", :name => "to", :class => "text"}
+        %select{:form => "new_message", :name => "to" }
+          -@users.each do |user|
+            %option{:value => user.id }= user.name
       %li
         %label{:for => "content"} Contents:
         %input{:type => "text", :name => "content", :class => "text"}

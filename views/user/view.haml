@@ -17,7 +17,9 @@
 	%tr
 		%th To
 		%th Content
+		%th Random
 	- @messages.each do |message|
 		%tr
 			%td= message.to
 			%td= message.content
+			%td= message.random

@@ -10,6 +10,8 @@ end
 
 post '/user/new' do
   user = SnailMail::User.create!({
+    username: params["username"],
+    password: params["password"],
     name: params["name"],
     address1: params["address1"],
     city: params["city"],
@@ -35,17 +37,28 @@ get '/user/:id' do
 end
 
 get '/user/:id/message/new' do
-  @id = params[:id]
-  @user = SnailMail::User.find(@id)
-  haml :'message/new', :locals => {user: @user}
+  @user = SnailMail::User.find(params[:id])
+  @users = SnailMail::User.all.to_a
+  haml :'message/new'
 end
 
 post '/user/:id/message/new' do
   @user = SnailMail::User.find(params[:id])
+  #binding.pry
+  
   @message = SnailMail::Message.create!({
     from: @user.id,
     to: params["to"],
-    content: params["content"]
+    content: params["content"],
+    random: (1..5).to_a.sample
   })
-  haml :'/message/view'
+  redirect to("user/#{@user.id}")
 end
+
+get '/login' do
+  haml :login
+end
+
+# post '/login' do
+  
+# end

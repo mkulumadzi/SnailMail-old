@@ -4,6 +4,7 @@
 %table
 	%tr
 		%th Name
+		%th Username
 		%th Address
 		%th City
 		%th State
@@ -12,6 +13,7 @@
 		%tr
 			%td
 				%a(title=@title href='/user/#{user.id}')= user.name
+			%td= user.username
 			%td= user.address1
 			%td= user.city
 			%td= user.state

@@ -1,0 +1,14 @@
+%html
+  %head
+    %title Welcome to SnailMail
+    
+%form{:action => "/login", :method => "POST"}
+  %fieldset
+    %ol
+      %li
+        %label{:for => "username"} User Name:
+        %input{:type => "text", :name => "username", :class => "text"}
+      %li
+        %label{:for => "password"} Password:
+        %input{:type => "password", :name => "password", :class => "text"}
+    %input{:type => "submit", :value => "Log In", :class => "button"}

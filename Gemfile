@@ -13,6 +13,7 @@ gem 'coffee-script'
 gem 'sass'
 gem 'uglifier'
 gem 'httparty'
+gem 'rspec'
 
 group :test, :development do
    gem 'foreman'
